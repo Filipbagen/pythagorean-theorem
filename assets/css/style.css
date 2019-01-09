@@ -1,3 +1,96 @@
 * {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.triangle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.border {
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-right-width: 300px;
+    border-left-width: 0px;
+    border-bottom: 300px solid #999;
+
+}
+
+.transparent {
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-right-width: 293px;
+    border-left-width: 0px;
+    border-bottom: 293px solid white;
+    position: relative;
+    top: 5px;
+    left: 2px;
+}
+
+.right-angle {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    position: relative;
+    bottom: 43px; 
+    left: 0px; 
+    top: -37px;
+    border: 2px solid #999;
+}
+
+.numinsert {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
+
+.numinsert {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+
+}
+
+input[type=text] {
+    width: 70px;
+    height: 70px;
+    margin: 0 50px 0 50px;
+    text-align: center;
+    font-size: 50px;
+    outline: 0;
+}
+
+.numinsert p {
+    font-size: 40px;
+}
+
+.A2 {
+    position: absolute;
+    top: -25px;
+    left: 120px;
+    font-size: 50px;
+}
+
+.B2 {
+    position: absolute;
+    top: -25px;
+    left: 320px;
+    font-size: 50px;
+}
+
+.C2 {
+    position: absolute;
+    top: -25px;
+    left: 518px;
+    font-size: 50px;
 }

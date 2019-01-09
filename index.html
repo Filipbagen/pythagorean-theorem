@@ -7,24 +7,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pythagorean Theorem</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
-    <div class="A" id="A">
-        <button onclick="getCathetusA()">Calculate A</button>
+    <div class="triangle">
+        <div class="border">
+            <div class="transparent"></div>
+            <div class="right-angle"></div>
+        </div>
         <p id="calcA"></p>
-    </div>
-
-    <div class="B" id="B">
-        <button onclick="getCathetusB()">Calculate B</button>
         <p id="calcB"></p>
-    </div>
-
-    <div class="C" id="C">
-        <button onclick="getHypotenuse()">Calculate C</button>
         <p id="calcC"></p>
     </div>
+
+    <div class="numinsert">
+        <form onkeypress="return event.keyCode != 13" class="formA">
+            <p class="A2">2</p>
+            <input type="text" id="A" maxlength="2" placeholder="A">
+        </form>
+        <p>+</p>
+        <div>
+            <form onkeypress="return event.keyCode != 13" class="formA">
+                <input type="text" id="B" maxlength="2" placeholder="B">
+                <p class="B2">2</p>
+            </form>
+        </div>
+        <p>=</p>
+        <div>
+            <form onkeypress="return event.keyCode != 13" class="formA">
+                <input type="text" id="C" maxlength="2" placeholder="C">
+                <p class="C2">2</p>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script src="assets/js/calculator.js"></script>
 </body>
 
 </html>
