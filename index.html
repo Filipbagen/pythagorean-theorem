@@ -16,27 +16,25 @@
             <div class="transparent"></div>
             <div class="right-angle"></div>
         </div>
-        <p id="calcA"></p>
-        <p id="calcB"></p>
-        <p id="calcC"></p>
+        <h3 id="result"></h3>
     </div>
 
     <div class="numinsert">
         <form onkeypress="return event.keyCode != 13" class="formA">
             <p class="A2">2</p>
-            <input type="text" id="A" maxlength="2" placeholder="A">
+            <input onchange="calculate()" type="text" id="A" maxlength="2" placeholder="A">
         </form>
         <p>+</p>
         <div>
             <form onkeypress="return event.keyCode != 13" class="formA">
-                <input type="text" id="B" maxlength="2" placeholder="B">
+                <input onchange="calculate()" type="text" id="B" maxlength="2" placeholder="B">
                 <p class="B2">2</p>
             </form>
         </div>
         <p>=</p>
         <div>
             <form onkeypress="return event.keyCode != 13" class="formA">
-                <input type="text" id="C" maxlength="2" placeholder="C">
+                <input onchange="calculate()" type="text" id="C" maxlength="2" placeholder="C">
                 <p class="C2">2</p>
             </form>
         </div>

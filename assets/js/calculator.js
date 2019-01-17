@@ -1,30 +1,33 @@
-function getCathetusA() {
-    var b = 4;
-    var c = 5;
-    var a = Math.sqrt(Math.pow(c, 2) - Math.pow(b, 2));
-
-    document.getElementById("calcA").innerHTML = "The cathetus is " + Math.round(a * 100) / 100 + " units of lenght!";
+function getNumber(element) {
+    const res = parseInt(element.value)
+    return res
 }
 
-function getCathetusB() {
-    var a = 3;
-    var c = 5;
-    var b = Math.sqrt(Math.pow(c, 2) - Math.pow(a, 2));
-
-    document.getElementById("calcB").innerHTML = "The cathetus is " + Math.round(b * 100) / 100 + " units of lenght!";
+function ending(number) {
+    const string = Math.round(number * 100) / 100 + ' units of lenght!'
+    return string
 }
 
-function getHypotenuse() {
-    var a = 3;
-    var b = 4;
-    var c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))
+function calculate() {
+    const aElement = document.querySelector('#A')
+    const bElement = document.querySelector('#B')
+    const cElement = document.querySelector('#C')
+    const resultElement = document.querySelector('#result')
 
-    document.getElementById('calcC').innerHTML = 'The hypotenuses is ' + Math.round(c * 100) / 100 + ' units of length!'
+    const a = getNumber(aElement)
+    const b = getNumber(bElement)
+    const c = getNumber(cElement)
+
+    if (a && b && c) {
+        prompt('You have to leave one input blank!')
+    } else if (a && b) {
+        const res = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))
+        resultElement.innerHTML = 'The hypotenuse is ' + ending(res)
+    } else if (b && c) {
+        const res = Math.sqrt(Math.pow(c, 2) - Math.pow(b, 2))
+        resultElement.innerHTML = 'The cathetus is ' + ending(res)
+    } else if (c && a) {
+        const res = Math.sqrt(Math.pow(c, 2) - Math.pow(a, 2))
+        resultElement.innerHTML = 'The cathetus is ' + ending(res)
+    }
 }
-
-function getTriangle(a, b) {
-    const result = Math.sqrt(Math.pow(a, 2) - Math.pow(b, 2))
-    return result
-}
-
-
